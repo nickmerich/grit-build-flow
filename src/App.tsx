@@ -14,6 +14,7 @@ import Coach from "./pages/Coach";
 import Progress from "./pages/Progress";
 import Settings from "./pages/Settings";
 import Rewards from "./pages/Rewards";
+import Community from "./pages/Community";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -36,8 +37,8 @@ const App = () => (
             <Route path="/progress" element={<Progress />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="/rewards" element={<Rewards />} />
-            {/* Placeholder route for remaining page */}
-            <Route path="/leaderboard" element={<div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-50 to-pink-50 pb-20 md:pl-64"><div className="text-center"><h1 className="text-3xl font-bold text-gray-800 mb-4">Community Coming Soon!</h1><p className="text-gray-600">Connect with other GRYT members</p></div></div>} />
+            <Route path="/community" element={<Community />} />
+            <Route path="/leaderboard" element={<Community />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
