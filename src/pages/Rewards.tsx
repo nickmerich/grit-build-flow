@@ -15,8 +15,11 @@ import {
   Filter,
   Share2,
   Crown,
-  Zap
+  Zap,
+  DollarSign,
+  Shield
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Rewards = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -43,7 +46,9 @@ const Rewards = () => {
       totalRequired: 30,
       description: 'Fuel your consistency with premium nutrition',
       featured: true,
-      pointsValue: 500
+      pointsValue: 500,
+      rewardValue: '$89',
+      sponsored: true
     },
     {
       id: 2,
@@ -56,7 +61,9 @@ const Rewards = () => {
       totalRequired: 21,
       description: 'Learn from the best in the world',
       featured: true,
-      pointsValue: 750
+      pointsValue: 750,
+      rewardValue: '$540',
+      sponsored: true
     },
     {
       id: 3,
@@ -69,7 +76,9 @@ const Rewards = () => {
       totalRequired: 14,
       description: 'Organize your life like a pro',
       featured: false,
-      pointsValue: 300
+      pointsValue: 300,
+      rewardValue: '$240',
+      sponsored: true
     },
     {
       id: 4,
@@ -82,7 +91,9 @@ const Rewards = () => {
       totalRequired: 10,
       description: 'Master your mind, master your life',
       featured: false,
-      pointsValue: 400
+      pointsValue: 400,
+      rewardValue: '$399',
+      sponsored: true
     },
     {
       id: 5,
@@ -95,7 +106,9 @@ const Rewards = () => {
       totalRequired: 30,
       description: 'Take control of your financial future',
       featured: false,
-      pointsValue: 450
+      pointsValue: 450,
+      rewardValue: '$210',
+      sponsored: true
     }
   ];
 
@@ -107,7 +120,9 @@ const Rewards = () => {
       participants: 2847,
       daysLeft: 15,
       reward: 'Premium Coffee Subscription',
-      icon: '☀️'
+      icon: '☀️',
+      sponsor: 'Blue Bottle Coffee',
+      rewardValue: '$150'
     },
     {
       id: 2,
@@ -116,7 +131,9 @@ const Rewards = () => {
       participants: 1203,
       daysLeft: 22,
       reward: 'Adobe Creative Suite',
-      icon: '🎨'
+      icon: '🎨',
+      sponsor: 'Adobe',
+      rewardValue: '$600'
     },
     {
       id: 3,
@@ -125,7 +142,9 @@ const Rewards = () => {
       participants: 3421,
       daysLeft: 35,
       reward: 'Premium Gym Membership',
-      icon: '💪'
+      icon: '💪',
+      sponsor: 'Equinox',
+      rewardValue: '$300'
     }
   ];
 
@@ -148,7 +167,32 @@ const Rewards = () => {
           <h1 className="text-3xl font-bold text-foreground mb-2 font-primary">GRYT Rewards</h1>
           <p className="text-muted-foreground font-body mb-2">Earn it. Level up your life.</p>
           <p className="text-sm text-muted-foreground font-body">GRYT recognizes GRYT.</p>
+          
+          {/* Free for Users Message */}
+          <div className="bg-gradient-to-r from-emerald-500/10 to-green-500/10 border border-emerald-500/20 rounded-full px-6 py-3 mt-4 inline-block">
+            <div className="flex items-center gap-2 text-emerald-700">
+              <Shield className="w-4 h-4" />
+              <span className="text-sm font-semibold">100% Free for Users • Sponsored by Partner Brands</span>
+            </div>
+          </div>
         </div>
+
+        {/* Business Model Explanation */}
+        <Card className="mb-8 border-blue-200 bg-gradient-to-r from-blue-50/50 to-indigo-50/50">
+          <CardContent className="p-6">
+            <div className="text-center">
+              <div className="flex items-center justify-center gap-2 mb-4">
+                <DollarSign className="text-blue-600" size={20} />
+                <h3 className="text-lg font-semibold text-blue-900">How GRYT Rewards Work</h3>
+              </div>
+              <p className="text-blue-800 text-sm leading-relaxed max-w-3xl mx-auto">
+                Our partner brands sponsor these rewards because they believe in your growth. 
+                When you unlock a reward, the brand pays us a fee (typically $3-$10) - you never pay anything. 
+                This way, we can keep GRYT completely free while rewarding your hard work!
+              </p>
+            </div>
+          </CardContent>
+        </Card>
 
         {/* User Stats Bar */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
@@ -190,7 +234,8 @@ const Rewards = () => {
           <CardHeader>
             <CardTitle className="flex items-center gap-2 font-primary">
               <Crown className="text-gryt-orange" size={20} />
-              Active Challenges
+              Sponsored Challenges
+              <Badge variant="secondary" className="ml-2 text-xs">Partner Funded</Badge>
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -201,6 +246,11 @@ const Rewards = () => {
                     <div className="text-3xl mb-2">{challenge.icon}</div>
                     <h3 className="font-semibold text-foreground font-primary">{challenge.title}</h3>
                     <p className="text-sm text-muted-foreground font-body mt-1">{challenge.description}</p>
+                    <div className="mt-2">
+                      <Badge variant="outline" className="text-xs">
+                        Sponsored by {challenge.sponsor}
+                      </Badge>
+                    </div>
                   </div>
                   
                   <div className="space-y-3">
@@ -210,7 +260,8 @@ const Rewards = () => {
                     </div>
                     
                     <div className="text-center">
-                      <p className="text-sm text-muted-foreground font-body mb-2">Reward: {challenge.reward}</p>
+                      <p className="text-sm text-muted-foreground font-body mb-1">Reward: {challenge.reward}</p>
+                      <p className="text-xs text-green-600 font-semibold mb-2">Value: {challenge.rewardValue}</p>
                       <Button className="w-full bg-gradient-to-r from-gryt-orange to-gryt-gold hover:from-gryt-orange-dark hover:to-gryt-gold-dark text-white font-semibold">
                         Join Challenge
                       </Button>
@@ -259,13 +310,21 @@ const Rewards = () => {
                     <div className="text-3xl">{reward.logo}</div>
                     <div>
                       <h3 className="font-semibold text-foreground font-primary">{reward.brand}</h3>
-                      <Badge variant="secondary" className="text-xs">
-                        {reward.category}
-                      </Badge>
+                      <div className="flex gap-2 mt-1">
+                        <Badge variant="secondary" className="text-xs">
+                          {reward.category}
+                        </Badge>
+                        {reward.sponsored && (
+                          <Badge variant="outline" className="text-xs text-blue-600">
+                            Sponsored
+                          </Badge>
+                        )}
+                      </div>
                     </div>
                   </div>
                   <div className="text-right">
                     <div className="text-sm font-semibold text-gryt-orange font-body">{reward.pointsValue} GP</div>
+                    <div className="text-xs text-green-600 font-semibold">Value: {reward.rewardValue}</div>
                   </div>
                 </div>
 
@@ -308,7 +367,7 @@ const Rewards = () => {
         </div>
 
         {/* Partner Application CTA */}
-        <Card className="border-2 border-dashed border-gryt-orange/30 bg-gradient-to-br from-gryt-orange/5 to-gryt-gold/5">
+        <Card className="border-2 border-dashed border-gryt-orange/30 bg-gradient-to-br from-gryt-orange/5 to-gryt-gold/5 mb-8">
           <CardContent className="p-8 text-center">
             <div className="mb-4">
               <div className="bg-gradient-to-r from-gryt-orange to-gryt-gold w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -316,14 +375,48 @@ const Rewards = () => {
               </div>
               <h3 className="text-xl font-bold text-foreground mb-2 font-primary">Partner with GRYT</h3>
               <p className="text-muted-foreground font-body mb-6">
-                Are you a brand that believes in rewarding discipline? Join our reward partner program.
+                Are you a brand that believes in rewarding discipline? Join our reward partner program and only pay when users achieve their goals.
               </p>
             </div>
             
-            <Button className="bg-gradient-to-r from-gryt-orange to-gryt-gold hover:from-gryt-orange-dark hover:to-gryt-gold-dark text-white font-semibold">
-              <ExternalLink size={16} className="mr-2" />
-              Apply as Partner
-            </Button>
+            <Link to="/partners">
+              <Button className="bg-gradient-to-r from-gryt-orange to-gryt-gold hover:from-gryt-orange-dark hover:to-gryt-gold-dark text-white font-semibold">
+                <ExternalLink size={16} className="mr-2" />
+                Apply as Partner
+              </Button>
+            </Link>
+          </CardContent>
+        </Card>
+
+        {/* Business Model Transparency */}
+        <Card className="border-gray-200 bg-gray-50/50">
+          <CardContent className="p-6">
+            <div className="text-center">
+              <h3 className="text-lg font-semibold text-gray-800 mb-4">Why Rewards Are Free for You</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+                <div className="text-center">
+                  <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <Users className="text-blue-600" size={20} />
+                  </div>
+                  <h4 className="font-semibold text-gray-800 mb-2">Brand Sponsorship</h4>
+                  <p className="text-gray-600">Partners sponsor rewards to reach motivated users who complete goals</p>
+                </div>
+                <div className="text-center">
+                  <div className="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <Target className="text-green-600" size={20} />
+                  </div>
+                  <h4 className="font-semibold text-gray-800 mb-2">Performance-Based</h4>
+                  <p className="text-gray-600">Brands only pay when you successfully unlock rewards through achievement</p>
+                </div>
+                <div className="text-center">
+                  <div className="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <Shield className="text-purple-600" size={20} />
+                  </div>
+                  <h4 className="font-semibold text-gray-800 mb-2">Always Free</h4>
+                  <p className="text-gray-600">GRYT's core functionality will always remain completely free for users</p>
+                </div>
+              </div>
+            </div>
           </CardContent>
         </Card>
       </div>
