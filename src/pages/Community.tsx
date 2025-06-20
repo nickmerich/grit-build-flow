@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -16,7 +15,7 @@ import {
   Search,
   Filter,
   Plus,
-  Fire,
+  Flame,
   Award,
   Crown,
   Zap,
@@ -267,14 +266,14 @@ const Community = () => {
                         )}
                         
                         <div className="flex items-center gap-1 mb-3">
-                          <Fire className="text-gryt-orange" size={16} />
+                          <Flame className="text-gryt-orange" size={16} />
                           <span className="text-sm font-semibold text-foreground">{post.streak} day streak</span>
                         </div>
                         
                         <div className="flex items-center justify-between">
                           <div className="flex items-center gap-4">
                             <button className="flex items-center gap-1 text-muted-foreground hover:text-gryt-orange transition-colors">
-                              <Fire size={16} />
+                              <Flame size={16} />
                               <span className="text-sm">{post.reactions.fire}</span>
                             </button>
                             <button className="flex items-center gap-1 text-muted-foreground hover:text-gryt-orange transition-colors">
@@ -333,7 +332,7 @@ const Community = () => {
                       <p className="text-xs text-muted-foreground font-body">{user.goal}</p>
                       <div className="flex items-center gap-2 mt-1">
                         <div className="flex items-center gap-1">
-                          <Fire className="text-gryt-orange" size={12} />
+                          <Flame className="text-gryt-orange" size={12} />
                           <span className="text-xs font-semibold">{user.streak}</span>
                         </div>
                         <span className="text-lg">{user.badge}</span>
