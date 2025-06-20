@@ -1,29 +1,31 @@
-
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import GradientButton from '@/components/ui/GradientButton';
 import { Target, Brain, Trophy, Users, CheckCircle, Star, Lightbulb, RotateCcw, Zap, ArrowRight, Play } from 'lucide-react';
-
 const Landing = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentStat, setCurrentStat] = useState(0);
-
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
-      setCurrentStat((prev) => (prev + 1) % 3);
+      setCurrentStat(prev => (prev + 1) % 3);
     }, 4000);
     return () => clearInterval(interval);
   }, []);
-
-  const animatedStats = [
-    { value: "92%", label: "of people fail their goals", color: "text-red-400" },
-    { value: "5x", label: "more likely to succeed with 1 goal", color: "text-emerald-400" },
-    { value: "$67B+", label: "wellness/self-growth market", color: "text-blue-400" }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-900 overflow-hidden">
+  const animatedStats = [{
+    value: "92%",
+    label: "of people fail their goals",
+    color: "text-red-400"
+  }, {
+    value: "5x",
+    label: "more likely to succeed with 1 goal",
+    color: "text-emerald-400"
+  }, {
+    value: "$67B+",
+    label: "wellness/self-growth market",
+    color: "text-blue-400"
+  }];
+  return <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-900 overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:24px_24px]" />
       
@@ -36,7 +38,7 @@ const Landing = () => {
               <div className="mb-8">
                 <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 border border-white/20 mb-6">
                   <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
-                  <span className="text-sm text-white/90 font-medium">Join the 8% who succeed</span>
+                  <span className="text-sm text-white/90 font-medium">AI Powered One Goal System</span>
                 </div>
                 
                 <h1 className="text-6xl md:text-8xl font-black text-white mb-8 tracking-tight leading-[0.9]">
@@ -54,19 +56,13 @@ const Landing = () => {
               
               <div className="flex flex-col sm:flex-row gap-4 mb-12">
                 <Link to="/onboarding">
-                  <GradientButton 
-                    size="lg" 
-                    className="group w-full sm:w-auto min-w-72 h-16 text-xl font-bold transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-orange-500/25"
-                  >
+                  <GradientButton size="lg" className="group w-full sm:w-auto min-w-72 h-16 text-xl font-bold transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-orange-500/25">
                     Start Your Transformation
                     <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
                   </GradientButton>
                 </Link>
                 
-                <button className="flex items-center justify-center gap-3 px-8 py-4 text-white/90 hover:text-white border border-white/20 hover:border-white/40 rounded-2xl transition-all duration-200 backdrop-blur-sm">
-                  <Play size={20} />
-                  <span className="font-semibold">Watch Demo</span>
-                </button>
+                
               </div>
 
               {/* Animated Stat Counter */}
@@ -187,9 +183,7 @@ const Landing = () => {
         <div className="container mx-auto px-6 py-20">
           <div className="max-w-5xl mx-auto text-center">
             <div className="flex items-center justify-center mb-8">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="text-yellow-400 fill-current mx-1" size={28} />
-              ))}
+              {[...Array(5)].map((_, i) => <Star key={i} className="text-yellow-400 fill-current mx-1" size={28} />)}
             </div>
             <blockquote className="text-3xl md:text-4xl text-white font-light mb-10 italic leading-relaxed">
               "I tried everything - apps, coaches, courses. Nothing stuck until GRYT. 
@@ -210,10 +204,7 @@ const Landing = () => {
             Stop being part of the 92% who fail. Start being part of the 8% who transform their lives.
           </p>
           <Link to="/onboarding">
-            <GradientButton 
-              size="lg" 
-              className="group min-w-80 h-20 text-2xl font-bold transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-orange-500/30"
-            >
+            <GradientButton size="lg" className="group min-w-80 h-20 text-2xl font-bold transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-orange-500/30">
               Yes, I'm Ready to Change
               <ArrowRight className="ml-3 group-hover:translate-x-2 transition-transform duration-300" size={24} />
             </GradientButton>
@@ -224,8 +215,6 @@ const Landing = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default Landing;
