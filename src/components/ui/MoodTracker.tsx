@@ -11,27 +11,27 @@ interface MoodTrackerProps {
 const MoodTracker = ({ mood, onMoodChange, className }: MoodTrackerProps) => {
   const moods = [
     { emoji: '😞', label: 'Terrible', value: 1, color: 'text-red-500' },
-    { emoji: '😕', label: 'Poor', value: 2, color: 'text-orange-500' },
-    { emoji: '😐', label: 'Okay', value: 3, color: 'text-yellow-500' },
+    { emoji: '😕', label: 'Poor', value: 2, color: 'text-gryt-orange' },
+    { emoji: '😐', label: 'Okay', value: 3, color: 'text-gryt-gold' },
     { emoji: '😊', label: 'Good', value: 4, color: 'text-green-500' },
-    { emoji: '😄', label: 'Amazing', value: 5, color: 'text-purple-500' },
+    { emoji: '😄', label: 'Amazing', value: 5, color: 'text-primary' },
   ];
 
   return (
-    <div className={cn("bg-white rounded-2xl p-6 shadow-sm border border-gray-100", className)}>
-      <h3 className="font-semibold text-gray-800 mb-4 text-center">How are you feeling today?</h3>
+    <div className={cn("bg-card rounded-3xl p-6 shadow-sm border border-border", className)}>
+      <h3 className="font-semibold text-foreground mb-4 text-center font-primary">How are you feeling today?</h3>
       <div className="flex justify-between items-center gap-2">
         {moods.map((moodOption) => (
           <button
             key={moodOption.value}
             onClick={() => onMoodChange(moodOption.value)}
             className={cn(
-              "flex flex-col items-center p-3 rounded-xl transition-all duration-200 hover:bg-gray-50",
-              mood === moodOption.value && "bg-gradient-to-br from-purple-50 to-pink-50 ring-2 ring-purple-300"
+              "flex flex-col items-center p-3 rounded-2xl transition-all duration-200 hover:bg-muted/50",
+              mood === moodOption.value && "bg-gradient-to-br from-primary/5 to-accent/5 ring-2 ring-primary"
             )}
           >
             <span className="text-3xl mb-1">{moodOption.emoji}</span>
-            <span className={cn("text-xs font-medium", moodOption.color)}>{moodOption.label}</span>
+            <span className={cn("text-xs font-medium font-body", moodOption.color)}>{moodOption.label}</span>
           </button>
         ))}
       </div>

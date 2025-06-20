@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,22 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// GRYT brand colors
+				gryt: {
+					orange: '#ff6b35',
+					gold: '#f7931e',
+					'orange-dark': '#e55a2b',
+					'gold-dark': '#e0841a',
+					black: '#1f1f1f',
+					'off-white': '#fafafa',
+					gray: '#737373'
 				}
+			},
+			fontFamily: {
+				sans: ['Manrope', 'Inter', 'system-ui', 'sans-serif'],
+				primary: ['Manrope', 'Inter', 'system-ui', 'sans-serif'],
+				body: ['Inter', 'system-ui', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

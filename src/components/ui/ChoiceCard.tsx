@@ -17,10 +17,10 @@ const ChoiceCard = ({ icon: Icon, title, description, isSelected, onClick, class
     <div
       onClick={onClick}
       className={cn(
-        "p-6 rounded-2xl border-2 cursor-pointer transition-all duration-200 hover:shadow-lg transform hover:-translate-y-1",
+        "p-6 rounded-3xl border-2 cursor-pointer transition-all duration-200 hover:shadow-lg transform hover:-translate-y-1",
         isSelected
-          ? "border-purple-500 bg-gradient-to-br from-purple-50 to-pink-50 shadow-lg"
-          : "border-gray-200 bg-white hover:border-purple-300",
+          ? "border-primary bg-gradient-to-br from-primary/5 to-accent/5 shadow-lg"
+          : "border-border bg-card hover:border-primary/30",
         className
       )}
     >
@@ -28,14 +28,14 @@ const ChoiceCard = ({ icon: Icon, title, description, isSelected, onClick, class
         <div className={cn(
           "p-4 rounded-full",
           isSelected
-            ? "bg-gradient-to-r from-purple-600 to-pink-600 text-white"
-            : "bg-gray-100 text-gray-600"
+            ? "bg-gradient-to-r from-gryt-orange to-gryt-gold text-white"
+            : "bg-muted text-muted-foreground"
         )}>
           <Icon size={32} />
         </div>
         <div>
-          <h3 className="font-bold text-lg text-gray-800 mb-2">{title}</h3>
-          <p className="text-gray-600 text-sm">{description}</p>
+          <h3 className="font-bold text-lg text-foreground mb-2 font-primary">{title}</h3>
+          <p className="text-muted-foreground text-sm font-body">{description}</p>
         </div>
       </div>
     </div>

@@ -9,12 +9,12 @@ interface GradientButtonProps extends React.ButtonHTMLAttributes<HTMLButtonEleme
 }
 
 const GradientButton = ({ variant = 'primary', size = 'md', className, children, ...props }: GradientButtonProps) => {
-  const baseStyles = "font-semibold rounded-xl transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-purple-200 disabled:opacity-50 disabled:cursor-not-allowed";
+  const baseStyles = "font-semibold rounded-2xl transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-primary/20 disabled:opacity-50 disabled:cursor-not-allowed font-primary";
   
   const variantStyles = {
-    primary: "bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5",
-    secondary: "bg-gray-100 text-gray-800 hover:bg-gray-200",
-    outline: "border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white"
+    primary: "bg-gradient-to-r from-gryt-orange to-gryt-gold text-white hover:from-gryt-orange-dark hover:to-gryt-gold-dark shadow-lg hover:shadow-xl transform hover:-translate-y-0.5",
+    secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+    outline: "border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
   };
   
   const sizeStyles = {
