@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import GradientButton from '@/components/ui/GradientButton';
@@ -44,7 +43,7 @@ const Landing = () => {
               <Link to="/onboarding">
                 <GradientButton 
                   size="lg" 
-                  className="w-full sm:w-auto min-w-64 animate-pulse hover:animate-none transform hover:scale-105 transition-all duration-200 shadow-2xl"
+                  className="w-full sm:w-auto min-w-64 transform hover:scale-105 transition-all duration-200 shadow-2xl"
                 >
                   Begin Your One Goal Journey
                 </GradientButton>
@@ -225,7 +224,7 @@ const Landing = () => {
         <Link to="/onboarding">
           <GradientButton 
             size="lg" 
-            className="min-w-64 transform hover:scale-105 transition-all duration-200 shadow-2xl animate-pulse hover:animate-none"
+            className="min-w-64 transform hover:scale-105 transition-all duration-200 shadow-2xl"
           >
             Yes, I'm Ready to Change
           </GradientButton>
