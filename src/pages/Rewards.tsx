@@ -23,7 +23,7 @@ const Rewards = () => {
   
   // Mock user data
   const userStats = {
-    grytPoints: 1,247,
+    grytPoints: 1247,
     currentStreak: 12,
     level: 4,
     completedChallenges: 8
