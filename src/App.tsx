@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -17,6 +16,7 @@ import Settings from "./pages/Settings";
 import Rewards from "./pages/Rewards";
 import Community from "./pages/Community";
 import NotFound from "./pages/NotFound";
+import FAQ from "./pages/FAQ";
 
 const App = () => {
   // Create QueryClient inside the component to avoid React context issues
@@ -49,6 +49,7 @@ const App = () => {
               <Route path="/rewards" element={<Rewards />} />
               <Route path="/community" element={<Community />} />
               <Route path="/leaderboard" element={<Community />} />
+              <Route path="/faq" element={<FAQ />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </div>
