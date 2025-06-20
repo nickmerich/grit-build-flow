@@ -29,9 +29,8 @@ const Landing = () => {
           {/* Left: Content */}
           <div className={`text-left max-w-2xl transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <h1 className="text-5xl md:text-7xl font-black text-white mb-6 tracking-tight leading-tight">
-              Change Your Life by Doing{' '}
               <span className="gradient-text bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
-                One Hard Thing
+                Do One Hard Thing
               </span>
             </h1>
             
