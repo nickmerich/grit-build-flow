@@ -37,7 +37,7 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-50 pb-20 md:pl-64">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 pb-20 md:pl-64">
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="mb-8">
@@ -74,7 +74,7 @@ const Dashboard = () => {
         {/* Daily Prompt */}
         <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 mb-8">
           <h3 className="font-semibold text-gray-800 mb-4 flex items-center">
-            <Calendar className="mr-2 text-purple-600" size={20} />
+            <Calendar className="mr-2 text-slate-700" size={20} />
             Today's Reflection
           </h3>
           <p className="text-gray-700 mb-6 text-lg leading-relaxed">
@@ -115,7 +115,7 @@ const Dashboard = () => {
           <Link to="/progress" className="block">
             <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-lg transition-shadow">
               <div className="flex items-center space-x-4">
-                <div className="p-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full">
+                <div className="p-3 bg-gradient-to-r from-slate-700 to-slate-600 rounded-full">
                   <Target className="text-white" size={24} />
                 </div>
                 <div>

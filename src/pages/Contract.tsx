@@ -33,12 +33,12 @@ const Contract = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-purple-800 to-pink-800 p-4">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 p-4">
       <div className="container mx-auto max-w-3xl py-8">
         <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12">
           {/* Header */}
           <div className="text-center mb-8">
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="bg-gradient-to-r from-slate-800 to-slate-700 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
               <Target className="text-white" size={32} />
             </div>
             <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
@@ -50,7 +50,7 @@ const Contract = () => {
           </div>
 
           {/* Contract Text */}
-          <div className="bg-gray-50 rounded-2xl p-8 mb-8 border-l-4 border-purple-600">
+          <div className="bg-gray-50 rounded-2xl p-8 mb-8 border-l-4 border-slate-700">
             <div className="text-lg leading-relaxed text-gray-800">
               <p className="mb-6">
                 <strong>I, _______________, commit to using GRYT to {goalText}.</strong>
@@ -101,7 +101,7 @@ const Contract = () => {
                 value={signature}
                 onChange={(e) => setSignature(e.target.value)}
                 placeholder="Type your full name here"
-                className="w-full p-4 border border-gray-300 rounded-xl text-lg focus:ring-4 focus:ring-purple-200 focus:border-purple-500 transition-all"
+                className="w-full p-4 border border-gray-300 rounded-xl text-lg focus:ring-4 focus:ring-slate-200 focus:border-slate-500 transition-all"
               />
             </div>
 
@@ -111,7 +111,7 @@ const Contract = () => {
                 id="agreement"
                 checked={isAgreed}
                 onChange={(e) => setIsAgreed(e.target.checked)}
-                className="mt-1 w-5 h-5 text-purple-600 focus:ring-purple-500 border-gray-300 rounded"
+                className="mt-1 w-5 h-5 text-slate-700 focus:ring-slate-500 border-gray-300 rounded"
               />
               <label htmlFor="agreement" className="text-sm text-gray-700 leading-relaxed">
                 I agree to this commitment and understand that lasting change requires consistent effort. 

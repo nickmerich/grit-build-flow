@@ -58,11 +58,11 @@ const Journal = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-50 pb-20 md:pl-64">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 pb-20 md:pl-64">
       <div className="container mx-auto px-4 py-8 max-w-3xl">
         {/* Header */}
         <div className="text-center mb-8">
-          <div className="bg-gradient-to-r from-purple-600 to-pink-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div className="bg-gradient-to-r from-slate-800 to-slate-700 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
             <BookOpen className="text-white" size={24} />
           </div>
           <h1 className="text-3xl font-bold text-gray-800 mb-2">Daily Journal</h1>
@@ -89,7 +89,7 @@ const Journal = () => {
             value={journalEntry}
             onChange={(e) => setJournalEntry(e.target.value)}
             placeholder="Write your thoughts, feelings, and reflections here. Be honest with yourself - this is your safe space to grow."
-            className="w-full h-48 p-4 border border-gray-300 rounded-xl resize-none focus:ring-4 focus:ring-purple-200 focus:border-purple-500 transition-all"
+            className="w-full h-48 p-4 border border-gray-300 rounded-xl resize-none focus:ring-4 focus:ring-slate-200 focus:border-slate-500 transition-all"
           />
           
           <div className="flex justify-between items-center mt-4">
@@ -117,9 +117,9 @@ const Journal = () => {
 
         {/* AI Response */}
         {aiResponse && (
-          <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl p-6 border border-purple-200 mb-6">
+          <div className="bg-gradient-to-r from-slate-50 to-slate-100 rounded-2xl p-6 border border-slate-200 mb-6">
             <div className="flex items-center mb-4">
-              <div className="bg-gradient-to-r from-purple-600 to-pink-600 w-10 h-10 rounded-full flex items-center justify-center mr-3">
+              <div className="bg-gradient-to-r from-slate-800 to-slate-700 w-10 h-10 rounded-full flex items-center justify-center mr-3">
                 <Sparkles className="text-white" size={16} />
               </div>
               <h3 className="font-semibold text-gray-800">Your AI Coach Says:</h3>

@@ -15,7 +15,7 @@ const ValuePropositionSection = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="group text-center p-8 rounded-3xl bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border border-white/20 hover:border-white/30 transition-all duration-300 hover:scale-105 shadow-xl">
-            <div className="bg-gradient-to-r from-purple-500 to-pink-500 w-24 h-24 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+            <div className="bg-gradient-to-r from-slate-700 to-slate-600 w-24 h-24 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300 shadow-lg">
               <Lightbulb className="text-white" size={40} />
             </div>
             <h3 className="text-2xl font-bold text-white mb-6">Laser Focus</h3>

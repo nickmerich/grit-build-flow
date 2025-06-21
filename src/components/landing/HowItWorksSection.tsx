@@ -4,7 +4,7 @@ import { Target, Brain, Trophy, Gift } from 'lucide-react';
 
 const HowItWorksSection = () => {
   return (
-    <div className="relative bg-gradient-to-r from-slate-900/95 to-purple-900/95 backdrop-blur-sm border-y border-white/10">
+    <div className="relative bg-gradient-to-r from-slate-900/95 to-slate-800/95 backdrop-blur-sm border-y border-white/10">
       <div className="container mx-auto px-4 md:px-6 py-12 md:py-20">
         <div className="text-center mb-8 md:mb-12">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-white mb-3 md:mb-4">How GRYT Works</h2>
@@ -15,8 +15,8 @@ const HowItWorksSection = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           <div className="group text-center p-4 md:p-6 rounded-2xl bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-md border border-white/20 hover:border-white/30 transition-all duration-300 hover:scale-105 shadow-xl relative">
-            <div className="absolute -top-2 md:-top-3 left-4 md:left-6 bg-gradient-to-r from-purple-500 to-pink-500 w-6 h-6 md:w-7 md:h-7 rounded-full flex items-center justify-center text-white font-bold text-xs">1</div>
-            <div className="bg-gradient-to-r from-purple-500 to-pink-500 w-16 h-16 md:w-20 md:h-20 rounded-xl flex items-center justify-center mx-auto mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+            <div className="absolute -top-2 md:-top-3 left-4 md:left-6 bg-gradient-to-r from-slate-700 to-slate-600 w-6 h-6 md:w-7 md:h-7 rounded-full flex items-center justify-center text-white font-bold text-xs">1</div>
+            <div className="bg-gradient-to-r from-slate-700 to-slate-600 w-16 h-16 md:w-20 md:h-20 rounded-xl flex items-center justify-center mx-auto mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
               <Target className="text-white" size={24} />
             </div>
             <h3 className="text-lg md:text-xl font-bold text-white mb-3 md:mb-4">One Goal at a Time</h3>
