@@ -1,13 +1,10 @@
-
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import GradientButton from '@/components/ui/GradientButton';
 import { Target, Trophy, ArrowRight, Zap } from 'lucide-react';
-
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentStat, setCurrentStat] = useState(0);
-
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
@@ -15,27 +12,20 @@ const HeroSection = () => {
     }, 4000);
     return () => clearInterval(interval);
   }, []);
-
-  const animatedStats = [
-    {
-      value: "92%",
-      label: "of people fail their goals",
-      color: "text-red-400"
-    },
-    {
-      value: "5x",
-      label: "more likely to succeed with 1 goal",
-      color: "text-emerald-400"
-    },
-    {
-      value: "$67B+",
-      label: "wellness/self-growth market",
-      color: "text-blue-400"
-    }
-  ];
-
-  return (
-    <div className="relative">
+  const animatedStats = [{
+    value: "92%",
+    label: "of people fail their goals",
+    color: "text-red-400"
+  }, {
+    value: "5x",
+    label: "more likely to succeed with 1 goal",
+    color: "text-emerald-400"
+  }, {
+    value: "$67B+",
+    label: "wellness/self-growth market",
+    color: "text-blue-400"
+  }];
+  return <div className="relative">
       <div className="container mx-auto px-6 py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center min-h-[80vh]">
           {/* Left: Content */}
@@ -43,7 +33,7 @@ const HeroSection = () => {
             <div className="mb-8">
               <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 border border-white/20 mb-6">
                 <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
-                <span className="text-sm text-white font-medium">AI Powered One Goal System</span>
+                <span className="text-sm text-white font-medium">Your Personal Growth Engine</span>
               </div>
               
               <h1 className="text-6xl md:text-8xl font-black text-white mb-8 tracking-tight leading-[0.9]">
@@ -63,7 +53,7 @@ const HeroSection = () => {
               <Link to="/onboarding">
                 <GradientButton size="lg" className="group w-full sm:w-auto min-w-72 h-16 text-xl font-bold transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-orange-500/25">
                   Start Your Transformation
-                  <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
+                  
                 </GradientButton>
               </Link>
             </div>
@@ -111,8 +101,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default HeroSection;
