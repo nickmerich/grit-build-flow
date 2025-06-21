@@ -37,9 +37,7 @@ const HeroSection = () => {
               </div>
               
               <h1 className="text-6xl md:text-8xl font-black text-white mb-8 tracking-tight leading-[0.9]">
-                <span className="gradient-text bg-gradient-to-r from-orange-400 via-yellow-400 to-orange-500 bg-clip-text text-transparent">
-                  Do One
-                </span>
+                <span className="gradient-text bg-gradient-to-r from-orange-400 via-yellow-400 to-orange-500 bg-clip-text text-transparent">Do The</span>
                 <br />
                 <span className="text-white/95">Hard Thing</span>
               </h1>
